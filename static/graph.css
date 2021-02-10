@@ -1,0 +1,235 @@
+
+.chartWrapper {/* w w w. j a v  a2 s.co  m*/
+   position: relative;
+}
+.chartWrapper > canvas {
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+   position: absolute;
+   left: 0;
+   top: 0;
+   pointer-events:none;
+}
+.chartAreaWrapper {
+   width: 900px;
+   height: 400;
+   overflow-x: scroll;
+   vertical-align: middle;
+}
+.myChartDiv {
+  max-width: 900px;
+  max-height: 400px;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+.buy-button{
+background-color: #655;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+}
+.sell-button{}
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.0;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+ box-shadow: 0px 10px 14px -7px #276873;
+ background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+ background-color:#599bb3;
+ border-radius:8px;
+ display:inline-block;
+ cursor:pointer;
+ color:#ffffff;
+ margin-bottom:10px;
+ margin-top:10px;
+ font-family:Arial;
+ font-size:20px;
+ font-weight:bold;
+ padding:13px 32px;
+ text-decoration:none;
+ text-shadow:0px 1px 0px #3d768a;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover {
+ background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+ background-color:#408c99;
+}
+
+
+.form-container .btn:active {
+	position:relative;
+	top:1px;
+
+}, 
+.open-button:hover {
+  opacity: 1;
+}
+.disabled {
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.button {
+  
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#table-wrapper {
+  position:relative;
+}
+#table-scroll {
+  height:400px;
+  overflow:auto;  
+  margin-top:50px;
+}
+
+#table-wrapper table {
+  text-align:center;
+  width:100%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+#table-wrapper tr:nth-child(even){background-color:#f2f2f2;}
+#table-wrapper table * {
+  
+  color:black;
+}
+#table-wrapper th{
+  background-color:#1f1f14;
+  color: #ffffff;
+}
+#table-wrapper table thead th .text {
+  position: sticky; top: 0;  
+  
+  z-index:2;
+  height:20px;
+  width:35%;
+  border:1px solid red;
+}
+tr:nth-child(even){background-color:#f2f2f2;}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddf;
+}
+
+.buy-button {
+	box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:3px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:10px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+}
+.buy-button:hover {
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	background-color:#0061a7;
+}
+.buy-button:active {
+	position:relative;
+	top:1px;
+}
+.sell-button {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:10px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+}
+.sell-button:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+}
+.sell-button:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+</style>
+

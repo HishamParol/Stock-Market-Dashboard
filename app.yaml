@@ -1,0 +1,9 @@
+entrypoint: "gunicorn -b :$PORT index:app"
+manual_scaling: 
+  instances: 1
+resources: 
+  cpu: 1
+  disk_size_gb: 20
+  memory_gb: 1
+runtime: python37
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>HOME</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar --------------->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WELCOME</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DATASET</a>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens ---------------------- -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">WELCOME</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">DATASETS</a>
+</div>
+
+<!-- Page content -------------------------------------------------->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+  <!-------------------------------------- The Band Section -------------------------------------------------------->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+   
+    <p class="w3-opacity"><i>Calculate Value at Risk for financial Datasets</i></p>  
+  </div>
+<!-- Black Section -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">DATASETS</h2>
+      <p class="w3-opacity w3-center"><i>Calculate Moving Average</i></p><br>
+
+<!----------------------------------------form---------------------------------------------------------->
+<form id ="stats" method="post" action="/graph">
+    <p><label><i class="fa fa-shopping-car" for="fname"></i>Window Size</label></p>
+    <input class="w3-input w3-border" type="range" value=10 id="fname" name="key1"  min=5 max 50 oninput="ageOutputId.value = fname.value"  required/>
+    <output class="w3-input"  name="ageOutputName" id="ageOutputId">10</output>
+        <p><label><i class="fa fa-shopping-car" for="data">Choose a Dataset</label></p>
+        <select class="w3-hover-white w3-wide w3-center w3-block w3-teal w3-padding-16 w3-section w3-right" id="data" name="data">
+        <option class="w3-hover-white w3-wide w3-center" name="data" value="1"></label></p> AMAZON </label></p></option>
+        <option class="w3-hover-white w3-wide w3-center"  name="data" value="2"><p><b>APPLE</b></p></option>
+        <option class="w3-hover-white w3-wide w3-center" name="data" value="3">ALIBABA</option>
+        <option class="w3-hover-white w3-wide w3-center" name="data"  value="4">BITCOIN</option>
+        </select>
+    <input class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right" type="submit" id="spotButton" value="Submit"/>
+</form>
+
+
+<!---------------------images--------------------------------------------------------------------------------------------->
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="/static/amazon.jpg" alt="AMAZON" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="/static/apple.jpg" alt="APPLE" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white"> 
+       </div>
+        </div>
+          <div class="w3-third w3-margin-bottom">
+          <img src="/static/bitcoin3.jpg" alt="BITCOIN" style="width:100%" class="w3-hover-opacity">
+             <div class="w3-container w3-white">
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- End Page Content -->
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  
+</footer>
+</body>
+</html>
+

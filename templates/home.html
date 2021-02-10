@@ -1,0 +1,181 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+        <link rel="stylesheet" href="static/def.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<style>
+
+
+
+.demo-non-form {
+    color: initial;
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-family: arial, verdana, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+.external-container button.external-button {
+    font-weight: 400;
+    padding: 10px;
+    margin: 6px 0 13px 0;
+    width: 100%;
+}
+
+
+</style>
+ <script>
+
+mobiscroll.settings = {
+    theme: 'ios',
+    themeVariant: 'light',
+    display: 'bubble'
+};
+
+mobiscroll.calendar('#demo-app-date');
+
+mobiscroll.calendar('#demo-app-date-time', {
+    controls: ['calendar', 'time']
+});
+
+mobiscroll.calendar('#demo-app-date-non-form');
+
+var instance = mobiscroll.calendar('#demo-app-date-external', {
+    showOnTap: false,
+    showOnFocus: false,
+    controls: ['calendar', 'time'],
+    onInit: function (event, inst) {
+        inst.setVal(new Date(), true);
+    }
+});
+
+document
+    .getElementById('show-demo-app-date-external')
+    .addEventListener('click', function () {
+        instance.show();
+    }, false);
+</script>  
+</head>
+<body>
+    
+     <div class="front">
+
+     <h1>Cloud Computing Coursework</h1>
+     <h2>Select a Company</h2>
+     </div>
+     <div>
+      <form action="/about" method = "post">
+     <button class="a" name="forwardBtn1" type = "submit">Amazon</button>
+     </form>
+
+     <form action="/graph" method = "post">
+     <button class="b" name="forwardBtn1"  type = "submit">Apple</button>
+     </form>
+    
+     <button class="c">Ali baba</button>
+      </div> 
+
+     {% for post in posts %}
+     	<hi>{{post.Date[4] }}</h1>
+        
+     {% endfor %}
+     
+
+     <form action="/about" method = "post">
+     <button name="forwardBtn" type = "submit">Forward</button>
+     </form>
+ <h1>Calculate Moving Average  action graph</h1>
+
+      <form id ="stats" method="post" action="/graph">
+      <label for="fname">Window Size</label><br>
+      <input type="text" id="fname" name="key1" size="20" placeholder="Select the window size"/><br>
+      <label for="data">Choose a Dataset:</label>
+      <select id="data" name="data">
+      <option value="Amazon">Amazon</option>
+      <option value="Apple">Apple</option>
+      <option value="Alibaba">Alibaba</option>
+      <option value="Bitcoin">Bitcoin</option>
+      </select>  
+      <input type="submit" id="spotButton" value="Submit"/>
+      </form>
+
+   button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">Calculate i class="fa fa-check">/i>/button  
+<p></p> 
+     <h1>Calculate Value at Risk (VaR) action moving avg</h1>
+
+      <form id ="stats" method="post" action="/movingavg">
+      <label for="fname">Window Size</label><br>
+      <input type="text" id="fname" name="key1" size="20" placeholder="Select the window size"/><br>
+      <label for="fname1">Value 1</label><br>
+      <input type="text" id="fname1" name="key2" size="20" placeholder="Select the window2 size"/><br>
+      <label for="fname2">Value 2</label><br>
+      <input type="text" id="fname2" name="key3" size="20" placeholder="Select the window3 size"/><br>
+      <label for="fname3">Value 3</label><br>
+      <input type="text" id="fname3" name="key4" size="20" placeholder="Select the window4 size"/><br>
+      
+      <input type="submit" id="spotButton" value="Submit"/>
+      </form>
+       <br/>
+      <label for="company">Choose a company:</label>
+      <select id="company">
+      <option value="Amazon">Amazon</option>
+      <option value="Apple">Apple</option>
+      <option value="Alibaba">Ali baba</option>
+      </select>
+
+
+<div mbsc-form class="mbsc-form-box">
+    <div class="mbsc-grid mbsc-form-grid">
+        <div class="mbsc-form-group">
+            <div class="mbsc-form-group-title">Using the Calendar with Mobiscroll form fields</div>
+            <div class="mbsc-row">
+                <div class="mbsc-col-sm-12 mbsc-col-md-6">
+                    <label>
+                        Date
+                        <input mbsc-input data-input-style="box" id="demo-app-date" placeholder="Please Select..." />
+                    </label>
+                </div>
+                <div class="mbsc-col-sm-12 mbsc-col-md-6">
+                    <label>
+                        Data & Time
+                        <input mbsc-input data-input-style="box" id="demo-app-date-time" placeholder="Please Select..." />
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mbsc-grid">
+    <div class="mbsc-row">
+        <div class="mbsc-col-sm-12 mbsc-col-md-6">
+            <label for="demo-app-date-non-form">Date</label>
+            <input id="demo-app-date-non-form" class="demo-non-form" placeholder="Please Select..." />
+        </div>
+        <div class="mbsc-col-sm-12 mbsc-col-md-6">
+            <div class="mbsc-row mbsc-align-items-end">
+                <div class="mbsc-col-9">
+                    <label for="demo-app-date-external">Show on button click only</label>
+                    <input id="demo-app-date-external" class="demo-non-form" />
+                </div>
+                <div class="mbsc-col-3 external-container">
+                    <button id="show-demo-app-date-external" class="external-button">Show</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html> 

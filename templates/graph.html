@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>MOVING AVERAGE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/static/graph.css">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+.table {opacity:1;}
+</style>
+
+
+<script>
+		var encoded_date_str = '{{dictionary.labels}}';
+		var decoded_date_str = encoded_date_str.replace(/&#39;/g, "'");
+		decoded_date_sub_str = decoded_date_str.substring(1, decoded_date_str.length-1);
+		decoded_date_sub_str = decoded_date_sub_str.replace(/'/g, '');
+		var dates = decoded_date_sub_str.split(", ");
+		var price = {{dictionary.Signal}};
+		var movingavg ={{dictionary.Moving_Avg}};
+</script>
+	<script async src="/static/plotly.js"></script>
+</head>
+
+<body>
+<!-- Navbar ------------------------------------------------------------------------------------------------------------------------------>
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunctionw3()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/index" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="javascript:void(1)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- body ------------------------------------------------------------------------------------------------------------------------------>
+
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">MOVING AVERAGE GRAPH</h2>
+    <p class="w3-opacity"><i>With buy and sell signals</i></p> 
+</div>
+
+<!-- PLOTTING GRAPH ------------------------------------------------------------------------------------------------------------------->
+<div id='myDiv'>
+</div>
+<!-- POP UP --------------------------------------------------------------------------------------------------------------------->
+<div id="myForm" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32"> 
+      <span onclick="document.getElementById('myForm').style.display='none'" 
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+      <h2 class="w3-wide"><i class="fa fa-bar-chart w3-margin-right"></i>Calculate VaR</h2>
+      </header>
+      <div class="w3-container">
+
+      <form action="/results" method="post">
+         <p><label><i for="demo"></i></label></p>
+         <input id="demo" class="w3-input w3-border" type="hidden" value="1" name='key7' required>
+         <p><label><i for="window"></i></label></p>
+         <input id="window" class="w3-input w3-border" type="hidden" value={{window_size}} name="windowsize" >
+         <input id="data" class="w3-input w3-border" type="hidden" value={{which_data}} name="dataidentifier" >
+         <p><label><i for="fname" class="fa fa-sliders"></i> Window Size</label></p>
+         <input type="range" id="fname" name="key4" value="24" class="w3-input w3-border" placeholder="Select the window size" min=5 max 50 oninput="ageOutputId.value = fname.value" required>
+         <output name="ageOutputName" id="ageOutputId">24</output>
+         <p><label><i for="fname1"class="fa fa-line-chart"></i>Monte-Carlo Simulations</label></p>
+         <input  id="fname1" name="key5" size="20"  class="w3-input w3-border" type="text" placeholder="Select the sample size" required>
+         <p><label><i for="fname2" class="fa fa-line-chart"></i> Number of Scalable Resources</label></p>
+         <input type="text" id="fname2" name="key6" size="20" class="w3-input w3-border"  placeholder="Select the scaling size" required>
+         <p><label><i for="fname3" class="fa fa-line-chart"></i>Confidence Interval</label></p>
+         <input type="text" id="fname3" name="key8" size="20" class="w3-input w3-border"  placeholder="Select the Confidence Interval" required>
+         <button  type="submit" value="1" name="lambda" class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">Lambda <i class="fa fa-check"></i></button>
+         <button  type="submit" value="1" name="ec2" class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right" disabled="disabled" >EC2 <i class="fa fa-check"></i></button>
+         <button class="w3-button w3-red w3-section" onclick="document.getElementById('myForm').style.display='none'">Close <i class="fa fa-remove"></i></button>
+       </form>
+        </div>
+    </div>
+  </div>
+<!-- JAVASCRIPTS------------------------------------------------------------------------------------------------------------------------- -->
+
+<script>
+function myFunctionrev(clicked) {
+  document.getElementById("demo").innerHTML = "Clicked Button= "+clicked;
+}
+
+function myFunction(clicked) {
+  document.getElementById("myForm").style.display = "block";
+   document.getElementById("demo").value = clicked;
+   {{dictionary.Signal[clicked]}}
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+<! ----------------------------------------------------------------->
+<div class="w3-panel w3-padding-large w3-white">
+</div>
+ <!-- Table Section -->
+ <div class="w3-teal" id="tour">
+   <div class="w3-container w3-content w3-padding-64" style="max-width:1100px">
+      <h2 class="w3-wide w3-center w3-black w3-hover-white">BUY or SELL SIGNALS</h2>
+      	<div class="w3-container w3-white">
+ 	<div id="table-wrapper" class="table w3-center">
+        <div id="table-scroll">
+          {% for table in posts %}
+	       {{titles[loop.index]}}
+               {{ table|safe}}
+          {% endfor %}
+         </div>
+      </div>
+</div>
+      <p class="w3-opacity w3-center w3-black"><i>Select a date to calculate VaR</i></p><br>
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+      </div>
+    </div>
+  </div>
+
+ 
+
+ 
+  
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+</footer>
+<script>
+var modal = document.getElementById('myForm');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
+
