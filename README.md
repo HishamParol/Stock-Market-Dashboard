@@ -8,9 +8,10 @@
     
     source “your environment name”/bin/activate
     
- -Run the requirements.txt file:
+ - Run the requirements.txt file:
  
     pip install -r requirements.txt
     
  - Run index.py file and project starts running on your localhost http://0.0.0.0:8081/
+ 
     python index.py
