@@ -5,6 +5,7 @@
 - Create an isolated Python environment and activate it:
 
     virtualenv -p python3 “your environment name”
+    
     source “your environment name”/bin/activate
     
  -Run the requirements.txt file:
