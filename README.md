@@ -1,5 +1,9 @@
 # Multi-cloud-Flask-Application
 
+Design and development of Python Flask web application for financial Value
+at Risk (VaR) calculation for various trading dataset and deployed in Multi-Cloud (Google App
+Engine, AWS EC2, AWS lambda, S3).
+
 - Download project files to your local machine.
 - Go to project directory in terminal. 
 - Create an isolated Python environment and activate it:
