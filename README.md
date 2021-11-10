@@ -1,4 +1,4 @@
-# Multi-cloud-Flask-Application
+# Stock Market dashboard (Multi cloud flask app)
 
 Design and development of Python Flask web application for financial Value
 at Risk (VaR) calculation for various trading dataset and deployed in Multi-Cloud (Google App
