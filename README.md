@@ -23,3 +23,5 @@ Engine, AWS EC2, AWS lambda, S3).</br>
  * Run index.py file and project starts running on your localhost http://0.0.0.0:8081/
  
     python index.py
+
+[![Hisham's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/HishamParol/github-readme-stats)
