@@ -24,4 +24,4 @@ Engine, AWS EC2, AWS lambda, S3).</br>
  
     python index.py
 
-[![Hisham's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/HishamParol/github-readme-stats)
+[![Hisham's GitHub stats](https://github-readme-stats.vercel.app/api?username=HishamParol)](https://github.com/HishamParol/github-readme-stats)
