@@ -1,8 +1,7 @@
 # Stock Market dashboard (Multi cloud flask app)
 
-Design and development of Python Flask web application for financial Value
-at Risk (VaR) calculation for various trading dataset and deployed in Multi-Cloud (Google App
-Engine, AWS EC2, AWS lambda, S3).</br>
+Design and development of Python Flask web application to calculate the Risk value for various Stock Markets and deployed in Multi-Cloud (Google App
+Engine, AWS ec2, AWS lambda, s3).</br>
 
 **Key Tools: Flask framework, Numpy, Plotly, AWS ec2, AWS Lambda, AWS S3 Storage, Google Cloud Platform**</br>
 **Languages: Python, HTML, CSS, JavaScript**<br>
@@ -26,4 +25,4 @@ a brief of exploring different cloud services in two powerful giants – Amazon 
 project is to understand and utilize on-demand cloud services and compare the costs of scalable resources.
 
 The term ‘Cloud’ which means collection of networks in computing world is a distributed, on-demand and convenient service that has easy access to IT resources at a reasonable 
-cost. According to NIST SP Cloud computing is characterized as a profound economic and technical shift which has a great potential to reduce the cost of IT systems .Instead of setting up one’s own infrastructure, which adds money, the users have to pay for the services they had used. In this experiment I have hosted my web application on Google Cloud Platform that provides Platform as a Service (PaaS) ,Amazon S3, which is a scalable storage infrastructure to store data and Amazon Lambda and EC2 resources for computation processes. This cloud system is compatible with the NIST’s service model – Software as a Service(SaaS), Platform as a Service( PaaS) and Infrastructure as a Service(IaaS).
+cost. According to NIST SP Cloud computing is characterized as a profound economic and technical shift which has a great potential to reduce the cost of IT systems .Instead of setting up one’s own infrastructure, which adds money, the users have to pay for the services they had used. In this experiment I have hosted my web application on Google Cloud Platform that provides Platform as a Service (PaaS) ,Amazon S3, which is a scalable storage infrastructure to store data and Amazon Lambda and EC2 resources for computation processes. ** This cloud system is compatible with the NIST’s service model – Software as a Service(SaaS), Platform as a Service( PaaS) and Infrastructure as a Service(IaaS).**
