@@ -25,6 +25,6 @@ Engine, AWS EC2, AWS lambda, S3).</br>
     python index.py
 
 # Introduction
-Cloud Computing which is based on internet is the on-demand delivery of IT resources and powerful computations on the basis of pay as you go scheme. In this paper, I have given 
+Cloud Computing which is based on internet is the on-demand delivery of IT resources and powerful computations on the basis of pay as you go scheme. In this project, I have given 
 a brief of exploring different cloud services in two powerful giants – Amazon Web Services (AWS) and Google Cloud Platform (GCP) to development a web application. This service helps user to calculate Value at Risk, profit/loss and other parameters for four different companies. The outcome of this 
 project is to understand and utilize on-demand cloud services and compare the costs of scalable resources.
