@@ -105,3 +105,15 @@ The graph will display closing price and moving average over the time. User can 
 Results are shown below for VaR at 95% and 99% confidence interval for Amazon Dataset. Different simulations and moving average size are selected to observe the change in VaR values. 
 </br></br>
 It is observed that the 95% confidence that the buyer or seller lose money increases as the monte-carlo simulations increase. Whereas slight change is only observed at 99%.
+</br></br>
+MA | VaR | Profit/Loss | 95% | 99%
+--- | --- | ---
+10 | 10,000 | 3309.998 | 0.0229 | 0.0163
+10 | 100,000 |3309.998 | 0.0398 | 0.0168
+10 | 1,000,000 | 3309.998 | 0.0619 | 0.0168
+50 | 10,000 | -3450.000 | 0.0145 | 0.0105
+50 | 100,000 | -3450.000 | 0.0257 | 0.0106
+50 | 1,000,000 | -3450.000 | 0.0397 | 0.0107
+100| 10,000 | -3975.000 | 0.0185 | 0.0174
+100 |100,000 | -3975.000 | 0.0371 | 0.0174
+100| 1,000,000 | -3975.000 | 0.0605 | 0.0175
