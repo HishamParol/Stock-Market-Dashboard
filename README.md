@@ -80,15 +80,15 @@ contains Ubuntu operating system. Unlike Lambda, ec2 is server-based resource an
 
 ## Implementation
 ---
-![Page1](https://github.com/HishamParol/Stock-Market-Dashboard/blob/master/static/1stpage.png)
+![Page1](https://github.com/HishamParol/Stock-Market-Dashboard/blob/master/static/1stpage.png)</br>
 First Page
-</br>
-![Page2](https://github.com/HishamParol/Stock-Market-Dashboard/blob/master/static/2ndpage.png)
+</br></br>
+![Page2](https://github.com/HishamParol/Stock-Market-Dashboard/blob/master/static/2ndpage.png)</br>
 Input form to calculate Value at Risk 
-</br>
-![Page3](https://github.com/HishamParol/Stock-Market-Dashboard/blob/master/static/3rdpage.png)
+</br></br>
+![Page3](https://github.com/HishamParol/Stock-Market-Dashboard/blob/master/static/3rdpage.png)</br>
 Results Page
-</br>
+</br></br>
 In this experiment, I have used S3 bucket to store the datasets. S3 provides flexibility in storing the data and thus reducing the cost. Moreover, it also helped me to reduce the data transmission volumes from GAE to Lambda or EC2. I considered using scalable resources for doing computational tasks such as calculating return values, VaR at 95th
 , 99th percentile and total VaR.
 </br></br>
