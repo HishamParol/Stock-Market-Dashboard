@@ -4,6 +4,11 @@
 Design and development of Python Flask web application to calculate the Risk value for various Stock Markets and deployed in Multi-Cloud (Google App
 Engine, AWS ec2, AWS lambda, s3).</br>
 
+Aim of this project:
+- Implementation of various cloud platforms.
+- Compare the Value at Risk for different monte-carlo simulation.
+- Computation time and cost comparison.
+- </br>
 **Key Tools: Flask framework, Numpy, Plotly,boto3, AWS ec2, AWS Lambda, AWS S3 Storage, Google Cloud Platform**</br>
 **Languages: Python, HTML, CSS, JavaScript**<br>
 
@@ -122,8 +127,6 @@ MA | VaR | Profit/Loss | 95% | 99%
 **Cost**
 Computation time for running the scalable services are shown 
 below </br>
-#| Service | Computation time and cost
---- | --- | ---
 
 ###### AWS Lambda 
 2.910 secs, AWS Lambda is charged based on the number of requests. And duration it takes for the code to run. Duration is calculated from the time we begin executing until it returns or terminates. Lambda provides free 1 million requests per month and 400,000 GB-seconds of compute time per month.
