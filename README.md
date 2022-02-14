@@ -125,5 +125,8 @@ below </br>
 #| Service | Computation time and cost
 --- | --- | ---
 
-1 | AWS Lambda | 2.910 secs, AWS Lambda is charged based on the number of requests. And duration it takes for the code to run. Duration is calculated from the time we begin executing until it returns or terminates. Lambda provides free 1 million requests per month and 400,000 GB-seconds of compute time per month.
-2 | EC2  | 2.2145 secs, AWS EC2 is free to try. In free tier it provides 750 hours of Linux and window t2.micro instances each month for one year. There are five ways to pay for Amazon EC2- ON-Demand, Savings Plan, Reserved Instances, Spot instances and Dedicated Hosts
+###### AWS Lambda 
+2.910 secs, AWS Lambda is charged based on the number of requests. And duration it takes for the code to run. Duration is calculated from the time we begin executing until it returns or terminates. Lambda provides free 1 million requests per month and 400,000 GB-seconds of compute time per month.
+</br>
+###### ec2  
+2.2145 secs, AWS EC2 is free to try. In free tier it provides 750 hours of Linux and window t2.micro instances each month for one year. There are five ways to pay for Amazon EC2- ON-Demand, Savings Plan, Reserved Instances, Spot instances and Dedicated Hosts
