@@ -82,17 +82,17 @@ contains Ubuntu operating system. Unlike Lambda, ec2 is server-based resource an
 ---
 In this experiment, I have used S3 bucket to store the datasets. S3 provides flexibility in storing the data and thus reducing the cost. Moreover, it also helped me to reduce the data transmission volumes from GAE to Lambda or EC2. I considered using scalable resources for doing computational tasks such as calculating return values, VaR at 95th
 , 99th percentile and total VaR.
-</br>
+</br></br>
 In order to cut down the cost in ec2, I have implemented auto start and stop functionality for ec2 instances. This will reduce the idle run time and instances are started only once user selects ec2 resource to calculate VaR. Once it turns ON, function will check the status of state. And if the status is running, variables are passed to remote flask application running on ec2 Ubuntu server. The computations are done there and return values are sent back to GAE. 
-</br>
+</br></br>
 After receiving the values, ec2 changes its status from running to stopped. This functionality is tested by logging into the AWS ec2 console and observing the instance status. However, ec2 takes around 10 secs to start, which delays the total computation time.The variables are transferred to EC2 server as URL arguments.
-</br>
+</br></br>
 In the flask app, these parameters are read using flask’s request function. After completing the calculations, computed values are sent back to GCP. For the parallel processing, I have used python’s multithreading function, that sends the request to scalable resources simultaneously. The average VaR from R parallel resources are calculated. This value is updated in S3. The computation time is reduced significantly in this process. However, GCP requires more memory and GPU power to handle multiple requests in parallel operation. The total computation time taken to run parallel process is displayed in the results page.
-</br>
+</br></br>
 The graph will display closing price and moving average over the time. User can slide through each section by selecting the range slider. In the table below the graph, user can select buy or sell buttons to calculate corresponding VaR. The date is automatically mapped by button ID. This date along with other user inputs are transferred to scalable resources. The date act as an index to identify corresponding price in Lambda or ec2. I have done testing to observe both prices are same in GCP and scalable resources as conflicts in date format may alter the results. All the user input fields in the form are set to mandatory as we require all values for calculation. 
 
 ## Results
 ---
 Results are shown below for VaR at 95% and 99% confidence interval for Amazon Dataset. Different simulations and moving average size are selected to observe the change in VaR values. 
-</br>
+</br></br>
 It is observed that the 95% confidence that the buyer or seller lose money increases as the monte-carlo simulations increase. Whereas slight change is only observed at 99%.
