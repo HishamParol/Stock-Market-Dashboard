@@ -5,10 +5,10 @@ Design and development of Python Flask web application to calculate the Risk val
 Engine, AWS ec2, AWS lambda, s3).</br>
 
 Aim of this project:
-- Implementation of various cloud platforms.
+- Implementation and understanding of various cloud platforms.
 - Compare the Value at Risk for different monte-carlo simulation.
 - Computation time and cost comparison.
-- </br>
+</br>
 **Key Tools: Flask framework, Numpy, Plotly,boto3, AWS ec2, AWS Lambda, AWS S3 Storage, Google Cloud Platform**</br>
 **Languages: Python, HTML, CSS, JavaScript**<br>
 
