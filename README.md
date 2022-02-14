@@ -9,8 +9,10 @@ Aim of this project:
 - Compare the Value at Risk for different monte-carlo simulation.
 - Computation time and cost comparison.
 </br>
+
 **Key Tools: Flask framework, Numpy, Plotly,boto3, AWS ec2, AWS Lambda, AWS S3 Storage, Google Cloud Platform**</br>
-**Languages: Python, HTML, CSS, JavaScript**<br>
+**Languages: Python, HTML, CSS, JavaScript**
+<br>
 
 # How to run this project 
 ---
