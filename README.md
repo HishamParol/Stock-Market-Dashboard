@@ -107,7 +107,7 @@ Results are shown below for VaR at 95% and 99% confidence interval for Amazon Da
 It is observed that the 95% confidence that the buyer or seller lose money increases as the monte-carlo simulations increase. Whereas slight change is only observed at 99%.
 </br></br>
 MA | VaR | Profit/Loss | 95% | 99%
---- | --- | ---
+--- | --- | ---| --- | ---
 10 | 10,000 | 3309.998 | 0.0229 | 0.0163
 10 | 100,000 |3309.998 | 0.0398 | 0.0168
 10 | 1,000,000 | 3309.998 | 0.0619 | 0.0168
