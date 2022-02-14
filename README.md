@@ -122,7 +122,7 @@ MA | VaR | Profit/Loss | 95% | 99%
 **Cost**
 Computation time for running the scalable services are shown 
 below </br>
-| Service | Computation time and cost
+#| Service | Computation time and cost
 --- | --- | ---
 
 1 | AWS Lambda | 2.910 secs, AWS Lambda is charged based on the number of requests. And duration it takes for the code to run. Duration is calculated from the time we begin executing until it returns or terminates. Lambda provides free 1 million requests per month and 400,000 GB-seconds of compute time per month.
